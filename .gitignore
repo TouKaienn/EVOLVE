@@ -1,0 +1,11 @@
+__pycache__/
+
+# Large binaries (hosted separately / downloaded by the user)
+*.pth
+*.nc
+*.raw
+
+# Inference / training outputs
+output/
+checkpoints/
+*.o[0-9]*
