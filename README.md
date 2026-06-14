@@ -72,8 +72,8 @@ The cross-domain **training database** (6,376 volumes from 21 scientific simulat
 and the **test volumes** used in the paper are available from the authors upon
 reasonable request. Please contact Kaiyuan Tang (<ktang2@nd.edu>) to request access.
 
-This also includes the example volume `data/H+0161.nc` referenced in the Quick Test
-below, which is not bundled in the repository due to its size.
+The single example volume used in the Quick Test below is bundled in the repository
+as `data/H+0161.nc.zip` (an ionization timestep); unzip it before use.
 
 ## Data Format
 
@@ -86,12 +86,14 @@ channel dimension added automatically). `VolumeFolder` accepts either:
 
 ## Quick Test
 
-A sample volume is provided at `data/H+0161.nc`. Run compression on it with the
-included checkpoint. Quality is controlled by the continuous **gain factor**
+A sample volume is bundled at `data/H+0161.nc.zip`. Unzip it, then run compression
+with the included checkpoint. Quality is controlled by the continuous **gain factor**
 (`--quality_mode factor` is the default):
 
 ```bash
 # from the repository root (EVOLVE/)
+unzip data/H+0161.nc.zip -d data/
+
 python infer.py \
     --checkpoint scripts/best_model.pth \
     --mode compression \
