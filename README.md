@@ -66,6 +66,15 @@ The trained model weights (~342 MB) are hosted on Google Drive:
 Download the file from the link above and place it at **`scripts/best_model.pth`**.
 All commands below assume the checkpoint lives at that path.
 
+## Dataset
+
+The cross-domain **training database** (6,376 volumes from 21 scientific simulations)
+and the **test volumes** used in the paper are available from the authors upon
+reasonable request. Please contact Kaiyuan Tang (<ktang2@nd.edu>) to request access.
+
+This also includes the example volume `data/H+0161.nc` referenced in the Quick Test
+below, which is not bundled in the repository due to its size.
+
 ## Data Format
 
 Volumes are stored as **NetCDF (`.nc`)** files, read with h5py. The first variable
